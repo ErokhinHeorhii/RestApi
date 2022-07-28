@@ -1,0 +1,32 @@
+{
+  "employees": [
+    {
+      "name": "Dima",
+      "salary": 2000,
+      "active": true,
+      "id": 1,
+      "role": "developer"
+    },
+    {
+      "name": "Vasya",
+      "salary": 1000,
+      "active": true,
+      "role": "developer",
+      "id": 2
+    },
+    {
+      "name": "Marc",
+      "salary": 3000,
+      "active": false,
+      "role": "menager",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "employeeId": 1,
+      "message": "hello world"
+    }
+  ]
+}
