@@ -20,6 +20,13 @@
       "active": false,
       "role": "menager",
       "id": 3
+    }, 
+    {
+      "name": "Marcus",
+      "salary": 500,
+      "active": false,
+      "role": "helper",
+      "id": 4
     }
   ],
   "comments": [

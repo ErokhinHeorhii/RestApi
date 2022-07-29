@@ -19,4 +19,4 @@ const getEmployee = async (queryParams) => {
   console.log(data);
 };
 
-getEmployee([{key: 'role', value: "menager"}, {key: 'name', value: "Marc"}]);
+getEmployee([{ key: "_page", value: 5 }, { key: "_limit", value: 1 }]);
