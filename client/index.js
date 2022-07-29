@@ -4,12 +4,14 @@ const path ={
    comments: '/comments',
 }
 
-const generateQueryString =(queryParams) =>queryParams.length ? `?${queryParams.join('&')}` : ''
+const generateQueryString =(queryParams=[]) => queryParams.length ? `?${queryParams.map(x=> `${x.key}=${x.value}`).join('&')}` : '';
 
 // [{key: 'role', value: "manager"}]
-const getEmployee = async(queryParams=[])=>{
-  const res =  await fetch(`${baseUrl}${path.employee}${queryParams.length ? `?${queryParams.join('&')}` : ''}`);
+const getEmployee = async(queryParams)=>{
+  const res =  await fetch(`${baseUrl}${path.employee}${generateQueryString(queryParams)}`);
   const data = await res.json();
-  console.log(data)
-}
+  console.log(data);
+
+};
+
 getEmployee();
