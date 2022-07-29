@@ -27,6 +27,13 @@
       "active": false,
       "role": "helper",
       "id": 4
+    },
+    {
+      "name": "Bill",
+      "salary": 1500,
+      "active": false,
+      "role": "developer",
+      "id": 5
     }
   ],
   "comments": [

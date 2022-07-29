@@ -11,12 +11,21 @@ const generateQueryString = (queryParams = []) => {
 };
 
 // [{key: 'role', value: "manager"}]
-const getEmployee = async (queryParams) => {
+const getEmployees = async (queryParams) => {
   const res = await fetch(
     `${baseUrl}${path.employee}${generateQueryString(queryParams)}`
   );
-  const data = await res.json();
-  console.log(data);
+  const count = +res.headers.get("X-Total-Count");
+  const items = await res.json();
+  return { items, count };
 };
 
-getEmployee([{key: 'role', value: "developer"}]);
+const main = async () => {
+  const employee = await getEmployees([
+    { key: "_page", value: 1 },
+    { key: "_limit", value: 2 },
+  ]);
+
+  console.log(employee);
+};
+main();
